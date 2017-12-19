@@ -1,0 +1,42 @@
+@import "styles/mixins"
+@import "styles/bulma/bulma"
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed')
+
+html, body
+  height: 100%
+  background: $bg-color
+  font-family: "Roboto Condensed", sans-serif
+
+.nav-content
+  +until($desktop)
+    margin: 0 25px
+
+.icon .fa
+  font-size: 1rem
+
+.modal-card
+  height: 100%
+  max-height: 100%
+  margin: 0
+
+  &-head, &-foot
+    border: none
+    background: $white
+    border-radius: 0
+
+  &-body
+    padding: 0 0 $padding--sm 0
+
+.box
+  border-radius: 0
+  border: 1px solid #f9f9f9
+  box-shadow: $card-shadow
+
+.container
+  max-width: $container-width
+
+.button
+  padding: $padding--sm $padding
+  height: auto
+  font-size: $font--sm
