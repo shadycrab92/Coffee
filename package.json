@@ -31,9 +31,11 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "mapbox-gl": "0.42.2",
     "object-assign": "4.1.0",
     "react": "16.0.0",
     "react-dom": "16.0.0",
+    "react-mapbox-gl": "3.4.0",
     "react-redux": "5.0.5",
     "react-router-dom": "4.2.2",
     "react-router-redux": "5.0.0-alpha.6",
