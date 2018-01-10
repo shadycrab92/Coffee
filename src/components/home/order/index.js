@@ -1,45 +1,24 @@
 import React, {Component} from "react";
-
 import "./style.sass";
 
-export default class Header extends Component {
+export default class Order extends Component {
   constructor() {
     super();
-    this.className="header";
+    this.className="order";
   }
 
   render() {
     return (
-      <section className={`${this.className}`}>
-        <div className={`${this.className}__top`} style={{backgroundImage: `url(${require("images/splash.png")})`}}>
-          <div className={`${this.className}__topContent`}>
-            <h1 className={`${this.className}__topTitle`}>Гудимова, Ионов и партнеры</h1>
-            <h3 className={`${this.className}__topSubtitle`}>Юридические услуги любого уровня сложности</h3>
-            <div className={`${this.className}__topNavigation`}>
-              <button className="button is-primary">
-              <span className="icon">
-                <i className="fa fa-angle-right"></i>
-              </span>
-                <span>
-                Оставить заявку
-              </span>
-              </button>
-            </div>
+      <section className={this.className}>
+        <div class={`columns ${this.className}__steps`}>
+          <div class={`${this.className}__step ${this.className}__step--1`}>
+            First column
           </div>
-
-          <div className={`${this.className}__bottom`}>
-            <span className={`${this.className}__bottomSection`}>
-              <span className="icon">
-                  <i className="fa fa-phone"></i>
-              </span>
-              +7 (985) 1234567
-            </span>
-            <span className={`${this.className}__bottomSection`}>
-              <span className="icon">
-                <i className="fa fa-envelope-o"></i>
-              </span>
-              test@yandex.ru
-            </span>
+          <div class={`${this.className}__step ${this.className}__step--2`}>
+            Second column
+          </div>
+          <div class={`${this.className}__step ${this.className}__step--3`}>
+            Third column
           </div>
         </div>
       </section>

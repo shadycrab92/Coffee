@@ -5,8 +5,9 @@ import Order from "components/home/order/index";
 
 const HomePage = () => {
   return (
-      <div>
+      <div className="homePage">
         <Map/>
+        <Order/>
       </div>
   );
 };
