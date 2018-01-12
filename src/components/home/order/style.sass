@@ -1,7 +1,7 @@
 @import "styles/variables"
 
 .order
-  position: absolute
+  position: fixed
   top: 0
   bottom: 0
   left: 5%
@@ -9,6 +9,9 @@
   pointer-events: none
 
   &__section
+    margin-bottom: 3rem
+
+  &__top
     margin-bottom: $padding--lg
 
   &__title
@@ -23,7 +26,8 @@
     &:hover
       color: $white
 
-  &__login
+  &__login.button
+    padding: 0 0.3rem
     border: none !important
 
     &:hover
@@ -31,7 +35,7 @@
       background-color: transparent !important
 
   &__steps.columns
-    height: 100vh
+    height: 100%
     margin-top: 0
     margin-left: 0
     margin-right: 0
@@ -45,22 +49,23 @@
     padding: 1.25rem
     opacity: 0
     pointer-events: all
+    overflow: auto
 
     &--1
       z-index: 3
       display: block
-      background-color: $brown--t
+      background-color: $brown
       opacity: 1
 
     &--2
       z-index: 2
-      background-color: $black--t
+      background-color: $black
       transform: translateX(-100%)
       transition: transform 0.25s ease-in-out
 
     &--3
       z-index: 1
-      background-color: $amber--t
+      background-color: $amber
       transform: translateX(-200%)
       transition: transform 0.5s ease-in-out
 
@@ -70,6 +75,7 @@
 
 
   &__item
+    position: relative
     display: flex
     flex-direction: row
     margin-bottom: $padding
@@ -79,9 +85,22 @@
 
     &Right
       color: $white
-      padding: 0.25rem $padding--sm
+      padding: 0.5rem $padding--sm
       flex-grow: 1
 
     &Text
       color: $white--t1
       font-size: $font--sm
+
+    &CountButtons
+      position: absolute
+      right: 0
+      top: -2px
+      transform: translateY(50%)
+
+    &Add.button
+      border: none
+
+      &:hover
+        color: $white--t !important
+        background-color: transparent !important

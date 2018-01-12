@@ -14,9 +14,14 @@ export default class Order extends Component {
       <section className={this.className}>
         <div className={`columns ${this.className}__steps`}>
           <div className={`${this.className}__step ${this.className}__step--1`}>
-            <div className={`${this.className}__section`}>
+
+            <div className={`${this.className}__top`}>
               <Link className={`${this.className}__logo`} to="/">UpCup</Link>
-              <a className={`button is-primary is-inverted is-outlined is-pulled-right ${this.className}__login`}>Войти</a>
+              <a className={`button  is-medium is-primary is-inverted is-outlined is-pulled-right ${this.className}__login`}>
+                 <span className="icon">
+                    <i className="fas fa-sign-in-alt"/>
+                 </span>
+              </a>
             </div>
 
             <div className={`${this.className}__section`}>
@@ -41,8 +46,8 @@ export default class Order extends Component {
               </p>
 
               <OrderItem name={"Cappuccino"} text={"Классический крепкий кофе"}/>
-              <OrderItem name={"Cappuccino"} text={"Классический крепкий кофе"}/>
-              <OrderItem name={"Cappuccino"} text={"Классический крепкий кофе"}/>
+              <OrderItem name={"Latte"} text={"Классический крепкий кофе"}/>
+              <OrderItem name={"Mocaccino"} text={"Классический крепкий кофе"}/>
               <OrderItem name={"Cappuccino"} text={"Классический крепкий кофе"}/>
             </div>
           </div>
